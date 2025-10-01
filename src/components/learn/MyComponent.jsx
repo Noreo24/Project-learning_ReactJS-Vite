@@ -5,8 +5,43 @@
 // () => {}: Arrow function (Giống lambda trong Java)
 // Mẹo: Nên để giá trị return trong ngoặc ()
 const MyComponent = () => {
+
+    // JSX: Nhúng JS bên trong bằng cách dùng dấu {}
+
+    // string
+    const name = 'Bùi Anh Tuấn';
+
+    // number
+    const age = 22;
+
+    // - boolean, undefined, null không hiển thị giá trị trực tiếp trên giao diện
+    // boolean
+    const isMale = true;
+
+    // undefined
+    const address = undefined;
+
+    // null
+    const phone = null;
+
+    // object
+    const info = { name: 'Bùi Anh Tuấn', age: 22, isMale: true };
+
+    // array
+    const hobbies = ['Ăn', 'Chơi', 'Ngủ'];
     return (
-        <div style={{ color: 'blue' }}>My Component</div>
+        <>
+            <div> {console.log('Hello')} </div>
+            <div style={{ color: 'white' }}> Kiểu string: {name}'s component </div>
+            <div style={{ color: 'red' }}> Kiểu number: Age: {age} </div>
+            <div style={{ color: 'yellow' }}> Kiểu boolean: Is Male: {isMale ? 'Yes' : 'No'} </div>
+            <div style={{ color: 'green' }}> Kiểu undefined: Address: {address} </div>
+            <div style={{ color: 'grey' }}> Kiểu null: Phone: {phone} </div>
+            <div> Kiểu object: Info: Name: {info.name}, Age: {info.age}, Is Male: {info.isMale ? 'Yes' : 'No'} </div>
+            <div> Kiểu object: {JSON.stringify(info)} </div>
+            <div> Kiểu array: Hobbies: {hobbies.join(', ')} </div>
+            <div> Kiểu array: {JSON.stringify(hobbies)} </div>
+        </>
     );
 }
 
