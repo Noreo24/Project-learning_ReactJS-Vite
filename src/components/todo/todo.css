@@ -1,0 +1,89 @@
+.todo-container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.todo-title {
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.todo-new {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    width: 60px;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.todo-input {
+    width: 300px;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+.todo-data {
+    font-size: 18px;
+}
+
+.todo-item {
+    padding: 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* Logo */
+.todo-image {
+    text-align: center;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
