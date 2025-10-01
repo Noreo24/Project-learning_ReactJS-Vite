@@ -2,18 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-// Component: Viết hoa chữ cái đầu tiên
-// Component: Function (Hàm) trả về JSX (HTML + CSS + JS)
-// JSX: Giống HTML nhưng có thể nhúng JS bên trong
-// JSX: Chỉ có thể trả về 1 thẻ bao ngoài (VD: div, section, fragment <> </>)
-// () => {}: Arrow function (Giống lambda trong Java)
-// Mẹo: Nên để giá trị return trong ngoặc ()
-// const MyComponent = () => {
-//   return (
-//     <div>My Component</div>
-//   );
-// }
+import MyComponent from './components/learn/MyComponent'
 
 // Sử dụng component bên trong component khác
 // Component cha (App) sử dụng component con (MyComponent)
@@ -31,7 +20,7 @@ const App = () => {
         </a>
       </div>
       <h1>Hello world - BAT!</h1>
-      {/* <MyComponent /> */}
+      <MyComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
