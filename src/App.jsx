@@ -28,6 +28,8 @@ const App = () => {
       // Không có dấu () vì không gọi hàm ngay, chỉ truyền hàm
       // addNewTodo={addNewTodo()} => như này sẽ là gọi hàm ngay
       />
+
+
       <TodoData
         name={bat}
         age={age}
