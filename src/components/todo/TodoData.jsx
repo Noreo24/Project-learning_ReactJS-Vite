@@ -24,11 +24,13 @@ const TodoData = (props) => {
         <div>
             <div className="todo-data">
                 <ul>
-                    <li className="todo-item">{name}</li>
+                    {/* <li className="todo-item">{name}</li>
                     <li className="todo-item">{age}</li>
                     <li className="todo-item">{object.name}</li>
                     <li className="todo-item">{object.age}</li>
-                    <li className="todo-item">{object.address}</li>
+                    <li className="todo-item">{object.address}</li> */}
+
+                    <li>{JSON.stringify(props.todoList)}</li>
                 </ul>
             </div>
         </div>
