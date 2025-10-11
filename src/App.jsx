@@ -14,10 +14,20 @@ const App = () => {
     age: 22,
     address: "Ha Noi"
   }
+
+  const addNewTodo = (name) => {
+    alert(`Call me ${name}`);
+  }
+
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
-      <TodoNew />
+      <TodoNew
+        addNewTodo={addNewTodo}
+      // Truyền hàm từ component cha (App) xuống component con (TodoData) như 1 props
+      // Không có dấu () vì không gọi hàm ngay, chỉ truyền hàm
+      // addNewTodo={addNewTodo()} => như này sẽ là gọi hàm ngay
+      />
       <TodoData
         name={bat}
         age={age}

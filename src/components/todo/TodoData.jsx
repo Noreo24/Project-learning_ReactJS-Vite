@@ -1,7 +1,6 @@
 
 const TodoData = (props) => {
-    // props là 1 object
-    // props có value là các thuộc tính được truyền từ component cha (App)
+    // props là 1 object có value là các thuộc tính được truyền từ component cha (App)
     // props = {
     //   name: "Bui tuan",
     //   age: 22,
@@ -12,14 +11,15 @@ const TodoData = (props) => {
     //   }
     // }
     // props.name => "Bui tuan"...
+
     // => có thể viết code như dưới đây, tên lấy từ bên component cha 
     // Viết theo kiểu object destructuring
     const { name, age, object } = props;
-
     // Tương tự cách viết
     // const name = props.name;
     // const age = props.age;
     // const object = props.object;
+
     return (
         <div>
             <div className="todo-data">
