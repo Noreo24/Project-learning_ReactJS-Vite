@@ -21,9 +21,27 @@ const App = () => {
     address: "Ha Noi"
   }
 
-  const addNewTodo = (name) => {
-    alert(`Call me ${name}`);
+  const addNewTodo = (newTask) => {
+    const newTodo = {
+      id: randomIntFromInterval(1, 10), name: newTask
+    }
+
+    setTodoList([...todoList, newTodo])
+    // setTodoList là hàm để cập nhật giá trị của todoList
+    // Cách cập nhật giá trị của mảng trong React
+    // Không được gán trực tiếp (todoList.push(newTodo)) mà phải tạo 1 mảng mới
+    // Sử dụng toán tử spread (...) để lấy tất cả các phần tử của mảng cũ (todoList)
+    // Rồi thêm phần tử mới vào mảng mới
+    // setTodoList([...todoList, newTodo]) => thêm phần tử mới vào cuối mảng
+    // setTodoList([newTodo, ...todoList]) => thêm phần tử mới vào đầu mảng
   }
+
+  // Hàm random số nguyên trong khoảng min, max
+  // Tham khảo: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+  const randomIntFromInterval = (min, max) => { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
 
   return (
     <div className="todo-container">
