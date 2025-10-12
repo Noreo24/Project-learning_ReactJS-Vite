@@ -13,17 +13,9 @@ const App = () => {
     { id: 2, name: "Learn JavaScript" }
   ]);
 
-  const bat = "Bui tuan";
-  const age = 22;
-  const object = {
-    name: "Bui Tuan",
-    age: 22,
-    address: "Ha Noi"
-  }
-
   const addNewTodo = (newTask) => {
     const newTodo = {
-      id: randomIntFromInterval(1, 10), name: newTask
+      id: randomIntFromInterval(1, 100000000), name: newTask
     }
 
     setTodoList([...todoList, newTodo])
@@ -53,11 +45,7 @@ const App = () => {
       // addNewTodo={addNewTodo()} => như này sẽ là gọi hàm ngay
       />
 
-
       <TodoData
-        name={bat}
-        age={age}
-        object={object}
         todoList={todoList}
       />
       <div className='todo-image'>

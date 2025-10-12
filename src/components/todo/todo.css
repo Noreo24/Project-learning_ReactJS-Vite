@@ -47,9 +47,9 @@
 }
 
 .todo-item {
-    padding: 10px;
-    font-size: 15px;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 /* Logo */

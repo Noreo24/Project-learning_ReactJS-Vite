@@ -16,6 +16,7 @@ const TodoNew = (props) => {
 
     const handleOnClick = () => {
         addNewTodo(valueInput)
+        setValueInput("");
     }
 
     const handleOnChange = (name) => {
@@ -29,7 +30,8 @@ const TodoNew = (props) => {
         <div className='todo-new'>
             <input className='todo-input'
                 type="text" placeholder='Add a new task'
-                onChange={(event) => { handleOnChange(event.target.value) }} />
+                onChange={(event) => { handleOnChange(event.target.value) }}
+                value={valueInput} />
             {/* Sử dụng thuộc tính onChange sẽ có sẵn biến event */}
 
             <button className="add-button" onClick={handleOnClick}>Add</button>
@@ -38,7 +40,7 @@ const TodoNew = (props) => {
             {/* <button className="add-button" onClick={() => { handleOnClick() }}>Add</button> */}
             {/* Tham khảo: https://react.dev/learn/responding-to-events mục Pitfall */}
 
-            <div>My input: {valueInput}</div>
+            {/* <div>My input: {valueInput}</div> */}
         </div>
     );
 }
