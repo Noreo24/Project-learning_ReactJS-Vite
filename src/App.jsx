@@ -45,12 +45,33 @@ const App = () => {
       // addNewTodo={addNewTodo()} => như này sẽ là gọi hàm ngay
       />
 
-      <TodoData
-        todoList={todoList}
-      />
-      <div className='todo-image'>
-        <img src={reactLogo} alt="No image" className='logo' />
-      </div>
+      {/* Cách 1: Sử dụng toán tử && */}
+      {/* {
+        todoList.length > 0 &&
+        <TodoData
+          todoList={todoList}
+        />
+      }
+
+      {
+        todoList.length === 0 &&
+        <div className='todo-image'>
+          <img src={reactLogo} alt="No image" className='logo' />
+        </div>
+      } */}
+
+
+      {/* Cách 2: Sử dụng toán tử ? : */}
+      {todoList.length > 0 ?
+        <TodoData
+          todoList={todoList}
+        />
+        :
+        <div className='todo-image'>
+          <img src={reactLogo} alt="No image" className='logo' />
+        </div>
+      }
+      {/* Tương tự dùng if...else trong java = ? : */}
     </div>
   )
 }
