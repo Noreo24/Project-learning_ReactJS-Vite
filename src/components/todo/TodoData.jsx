@@ -7,19 +7,19 @@ const TodoData = (props) => {
     return (
         <div>
             <div className="todo-data">
-                <ul>
-                    {todoList.map((item, index) => {
-                        return (
-                            <>
-                                <div className="todo-item">
-                                    <li>{item.name}</li>
-                                    <button>Delete</button>
-                                </div>
-                            </>
-                        )
-                    })}
-                    {/* <li>{JSON.stringify(todoList)}</li> */}
-                </ul>
+                {/* <ul> */}
+                {todoList.map((item, index) => {
+                    return (
+                        // <>
+                        <div className={`todo-item`} key={item.id}>
+                            <div>{item.name}</div>
+                            <button>Delete</button>
+                        </div>
+                        // </>
+                    )
+                })}
+                {/* <li>{JSON.stringify(todoList)}</li> */}
+                {/* </ul> */}
             </div>
         </div>
     );

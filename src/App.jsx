@@ -9,8 +9,8 @@ import { useState } from 'react';
 const App = () => {
 
   const [todoList, setTodoList] = useState([
-    { id: 1, name: "Learn React" },
-    { id: 2, name: "Learn JavaScript" }
+    // { id: 1, name: "Learn React" },
+    // { id: 2, name: "Learn JavaScript" }
   ]);
 
   const addNewTodo = (newTask) => {
