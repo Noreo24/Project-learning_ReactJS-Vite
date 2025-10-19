@@ -8,10 +8,7 @@ import { useState } from 'react';
 // Component cha (App) sử dụng component con (MyComponent)
 const App = () => {
 
-  const [todoList, setTodoList] = useState([
-    // { id: 1, name: "Learn React" },
-    // { id: 2, name: "Learn JavaScript" }
-  ]);
+  const [todoList, setTodoList] = useState([]);
 
   const addNewTodo = (newTask) => {
     const newTodo = {
@@ -28,12 +25,16 @@ const App = () => {
     // setTodoList([newTodo, ...todoList]) => thêm phần tử mới vào đầu mảng
   }
 
+  const deleteTodo = (id) => {
+    const newTodoList = todoList.filter(item => item.id !== id)
+    setTodoList(newTodoList);
+  }
+
   // Hàm random số nguyên trong khoảng min, max
   // Tham khảo: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
   const randomIntFromInterval = (min, max) => { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
 
   return (
     <div className="todo-container">
@@ -65,6 +66,7 @@ const App = () => {
       {todoList.length > 0 ?
         <TodoData
           todoList={todoList}
+          deleteTodo={deleteTodo}
         />
         :
         <div className='todo-image'>

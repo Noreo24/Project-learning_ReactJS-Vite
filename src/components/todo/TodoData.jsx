@@ -3,8 +3,11 @@ import React from "react";
 const TodoData = (props) => {
     // props là 1 object có value là các thuộc tính được truyền từ component cha (App)
     // Viết theo kiểu object destructuring
-    const { todoList } = props;
+    const { todoList, deleteTodo } = props;
 
+    const deleteById = (id) => {
+        deleteTodo(id);
+    }
     return (
         <div>
             <div className="todo-data">
@@ -14,7 +17,11 @@ const TodoData = (props) => {
                             // <React.Fragment key={item.id}>
                             <div className={`todo-item`} key={item.id}>
                                 <li>{item.name}</li>
-                                <button>Delete</button>
+                                <button
+                                    style={{ cursor: "pointer" }}
+                                    onClick={() => deleteById(item.id)}>
+                                    Delete
+                                </button>
                             </div>
                             // </React.Fragment>
                             // Dùng React.Fragment để có thể thêm thuộc tính (VD: key)
