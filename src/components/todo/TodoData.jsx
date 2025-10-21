@@ -11,7 +11,7 @@ const TodoData = (props) => {
     return (
         <div>
             <div className="todo-data">
-                <ul>
+                <ul style={{ listStyle: "none" }}>
                     {todoList.map((item, index) => {
                         return (
                             // <React.Fragment key={item.id}>
@@ -31,7 +31,7 @@ const TodoData = (props) => {
                     })}
                 </ul>
             </div>
-        </div>
+        </div >
     );
 }
 

@@ -3,6 +3,8 @@ import TodoData from './components/todo/TodoData';
 import TodoNew from './components/todo/TodoNew';
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
+import Header from './components/layouts/header';
+import Footer from './components/layouts/footer';
 
 // Sử dụng component bên trong component khác
 // Component cha (App) sử dụng component con (MyComponent)
@@ -37,17 +39,19 @@ const App = () => {
   }
 
   return (
-    <div className="todo-container">
-      <div className="todo-title">Todo List</div>
-      <TodoNew
-        addNewTodo={addNewTodo}
-      // Truyền hàm từ component cha (App) xuống component con (TodoData) như 1 props
-      // Không có dấu () vì không gọi hàm ngay, chỉ truyền hàm
-      // addNewTodo={addNewTodo()} => như này sẽ là gọi hàm ngay
-      />
+    <>
+      <Header />
+      <div className="todo-container">
+        <div className="todo-title">Todo List</div>
+        <TodoNew
+          addNewTodo={addNewTodo}
+        // Truyền hàm từ component cha (App) xuống component con (TodoData) như 1 props
+        // Không có dấu () vì không gọi hàm ngay, chỉ truyền hàm
+        // addNewTodo={addNewTodo()} => như này sẽ là gọi hàm ngay
+        />
 
-      {/* Cách 1: Sử dụng toán tử && */}
-      {/* {
+        {/* Cách 1: Sử dụng toán tử && */}
+        {/* {
         todoList.length > 0 &&
         <TodoData
           todoList={todoList}
@@ -62,19 +66,21 @@ const App = () => {
       } */}
 
 
-      {/* Cách 2: Sử dụng toán tử ? : */}
-      {todoList.length > 0 ?
-        <TodoData
-          todoList={todoList}
-          deleteTodo={deleteTodo}
-        />
-        :
-        <div className='todo-image'>
-          <img src={reactLogo} alt="No image" className='logo' />
-        </div>
-      }
-      {/* Tương tự dùng if...else trong java = ? : */}
-    </div>
+        {/* Cách 2: Sử dụng toán tử ? : */}
+        {todoList.length > 0 ?
+          <TodoData
+            todoList={todoList}
+            deleteTodo={deleteTodo}
+          />
+          :
+          <div className='todo-image'>
+            <img src={reactLogo} alt="No image" className='logo' />
+          </div>
+        }
+        {/* Tương tự dùng if...else trong java = ? : */}
+      </div>
+      <Footer />
+    </>
   )
 }
 
