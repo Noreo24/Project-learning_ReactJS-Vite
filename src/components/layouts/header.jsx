@@ -5,7 +5,7 @@ const Header = () => {
         <ul className="header">
             <li className="header-item"><NavLink to="/">Home</NavLink></li>
             <li className="header-item"><NavLink to="/users">Users</NavLink></li>
-            <li className="header-item"><NavLink to="/products">Products</NavLink></li>
+            <li className="header-item"><NavLink to="/books">Books</NavLink></li>
         </ul>
     )
     // Dùng thẻ <a></a> để tạo link chuyển trang nhưng sẽ load lại toàn bộ trang
