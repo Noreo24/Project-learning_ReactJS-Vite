@@ -1,0 +1,50 @@
+{
+	"name": "flat-util",
+	"version": "1.1.11",
+	"description": "Flatten a nested array.",
+	"main": "index.js",
+	"scripts": {
+		"build": "rollup --config",
+		"prepublishOnly": "npm run build",
+		"lint": "eslint . --max-warnings 0",
+		"lint:fix": "eslint . --fix --max-warnings 0",
+		"test": "npm run build && node test-runner.mjs"
+	},
+	"files": [
+		"index.js",
+		"umd"
+	],
+	"repository": "jonkemp/flat-util",
+	"keywords": [
+		"array",
+		"flat",
+		"flatten",
+		"nested",
+		"utility",
+		"util"
+	],
+	"author": {
+		"name": "Jonathan Kemp",
+		"email": "kempdogg@gmail.com",
+		"url": "http://jonkemp.com/"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jonkemp/flat-util/issues"
+	},
+	"homepage": "https://github.com/jonkemp/flat-util#readme",
+	"devDependencies": {
+		"@eslint/js": "^9.19.0",
+		"@rollup/plugin-commonjs": "^28.0.2",
+		"@rollup/plugin-node-resolve": "^16.0.0",
+		"babel-eslint": "^10.1.0",
+		"chai": "^5.1.2",
+		"chalk": "^5.4.1",
+		"eslint": "^9.19.0",
+		"globals": "^15.14.0",
+		"http-server": "^14.1.1",
+		"mocha": "^11.1.0",
+		"puppeteer": "^24.1.1",
+		"rollup": "^4.32.1"
+	}
+}
